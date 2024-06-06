@@ -1,8 +1,5 @@
-# from media import Books?
-# from class_file import Library --or whatever name class was given
-
+import user_actions
 def main():
-    library = Library()
 
     while True:
         print('\nLibrary Terminal')
@@ -16,10 +13,10 @@ def main():
         choice = input('Please choose which action you would like to take (1-7): ')
 
         if choice == '1':
-            library.all_books()
+            user_actions.book_display()
         elif choice == '2':
             author = input("Enter the author's name: ")
-            results = library.search_by_author(author)
+            results = user_actions.search_author(author)
             if results:
                 for book in results:
                     print(book.get_info())
@@ -28,7 +25,7 @@ def main():
                 print("No books found by that author.")
         elif choice == '3':
             keyword = input('Enter the title keyword: ')
-            results = library.search_by_title(keyword)
+            results = user_actions.search_title(keyword)
             if results:
                 for book in results:
                     print(book.get_info())
@@ -37,12 +34,12 @@ def main():
                 print("No books found with that keyword.")
         elif choice == '4':
             book_title = input("Enter the title of the book to check out: ")
-            library.checkout_book(book_title)
+            user_actions.checkout_book(book_title)
         elif choice == "5":
             book_title = input("Enter the title of the book to return: ")
-            library.return_book(book_title)
+            user_actions.return_book(book_title)
         elif choice == "6":
-            library.process_returns()
+            user_actions.process_returns()
         elif choice == "7":
             break
         else:
