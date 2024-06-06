@@ -54,7 +54,7 @@ class Books(Media):
  
     
 class Movies(Media):
-    def __init__(self, title: int, checked_out: bool, director: str, runtime: int)
+    def __init__(self, title: int, director: str, runtime: int, checked_out: bool)
     super()__init__(title, checked_out)
     self.director = director
     self.runtime = runtime
