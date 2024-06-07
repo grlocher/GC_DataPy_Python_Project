@@ -4,10 +4,13 @@ from media import all_books, Books
 
 def book_display():
     for i, book in enumerate(all_books, 1):
+        text = ''
         if book.checked_out:
-            print(f'{i}. {book.title} by {book.author} is currently checked out. It\'s current condition is: {book.provide_condition()}')
+            text = "is currently checked out. It\'s current condition is: "
         else:
-            print(f'{i}. {book.title} by {book.author} is available. It\'s current condition is: {book.provide_condition()}')
+            text = "is available. It\'s current condition is: "
+        print(f'{i}. {book.title} by {book.author} {text}', end="")
+        book.provide_condition()
 
 
 def search_author():
