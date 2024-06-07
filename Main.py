@@ -11,7 +11,8 @@ def main():
         print('4. Checkout a book')
         print('5. Return a book')
         print('6. Process returned books')
-        print('7. Exit')
+        print('7. Add a new book')
+        print('8. Exit')
         choice = input('Please choose which action you would like to take (1-7): ')
 
         if choice == '1':
@@ -27,6 +28,8 @@ def main():
         elif choice == "6":
             user_actions.process_returns()
         elif choice == "7":
+            user_actions.add_book()
+        elif choice == "8":
             break
         else:
             print("Invalid choice. Please try again.")
