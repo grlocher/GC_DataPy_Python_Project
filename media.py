@@ -9,8 +9,23 @@ class Books:
         self.condition -= 1
         return self.condition
 
+    def return_book(self):
+        return self.checked_out is False
+
     def get_info(self):
         return f'Title: {self.title}\nAuthor: {self.author}'
+
+    def provide_condition(self):
+        if self.condition >= 4:
+            print('Excellent')
+        elif self.condition == 3:
+            print('Good')
+        elif self.condition == 2:
+            print('OK')
+        elif self.condition == 1:
+            print('Poor')
+        else:
+            print('Unreadable')
 
 
 all_books = [Books("1984", "George Orwell", False, 4),
