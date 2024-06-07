@@ -12,10 +12,8 @@ def main():
         print('4. Checkout a book')
         print('5. Return a book')
         print('6. Process returned books')
-<<<<<<< HEAD
         print('7. Add a new book')
         print('8. Exit')
->>>>>>> main
         choice = input('Please choose which action you would like to take (1-7): ')
 
         # Handling different choices made by the user
