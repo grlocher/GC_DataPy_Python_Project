@@ -5,9 +5,9 @@ from media import all_books, Books
 def book_display():
     for i, book in enumerate(all_books, 1):
         if book.checked_out:
-            print(f'{i}. {book.title} by {book.author} is currently checked out. It\'s current condition is: {book.condition}')
+            print(f'{i}. {book.title} by {book.author} is currently checked out. It\'s current condition is: {book.condition.lower()}')
         else:
-            print(f'{i}. {book.title} by {book.author} is available. It\'s current condition is: {book.condition}')
+            print(f'{i}. {book.title} by {book.author} is available. It\'s current condition is: {book.condition.lower()}')
 
 
 def search_author():
@@ -26,7 +26,7 @@ def search_title():
 
 def select_book():
     book_search = int(input('Enter the book you would like to check out: '))
-    book = all_books[book_search]
+    book = all_books[book_search - 1]
     if book.checked_out:
         print('Sorry, this book is not available at the moment')
     else:
