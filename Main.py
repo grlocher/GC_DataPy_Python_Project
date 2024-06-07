@@ -17,29 +17,13 @@ def main():
         if choice == '1':
             user_actions.book_display()
         elif choice == '2':
-            author = input("Enter the author's name: ")
-            results = user_actions.search_author(author)
-            if results:
-                for book in results:
-                    print(book.get_info())
-                    print("-" * 40)
-            else:
-                print("No books found by that author.")
+            user_actions.search_author()
         elif choice == '3':
-            title = input('Enter the title: ')
-            results = user_actions.search_title(title)
-            if results:
-                for book in results:
-                    print(book.get_info())
-                    print("-" * 40)
-            else:
-                print("No books found with that title.")
+            user_actions.search_title()
         elif choice == '4':
-            book_title = input("Which book would you like to checkout?: ")
-            user_actions.select_book(book_title)
+            user_actions.select_book()
         elif choice == "5":
-            book_title = input("Enter the title of the book to return: ")
-            user_actions.return_book(book_title)
+            user_actions.return_book()
         elif choice == "6":
             user_actions.process_returns()
         elif choice == "7":
