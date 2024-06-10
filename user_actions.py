@@ -4,7 +4,6 @@ from media import all_books, Books
 
 def book_display():
     for i, book in enumerate(all_books, 1):
-        text = ''
         if book.checked_out:
             text = "is currently checked out. It\'s current condition is: "
         else:
@@ -15,16 +14,16 @@ def book_display():
 
 def search_author():
     author_search = str(input('Search for a book by author: ')).lower()
-    for book in all_books:
+    for i, book in enumerate(all_books):
         if author_search in book.author.lower():
-            print(f'{book.title} by {book.author}')
+            print(f'{i}. {book.title} by {book.author}')
 
 
 def search_title():
     title_search = str(input('Search for a book by title: ')).lower()
-    for book in all_books:
+    for i, book in enumerate(all_books):
         if title_search in book.title.lower():
-            print(f'{book.title} by {book.author}')
+            print(f'{i}. {book.title} by {book.author}')
 
 
 def select_book():

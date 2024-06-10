@@ -18,7 +18,7 @@ class Books:
     def provide_condition(self):
         if self.condition == 5:
             print('Perfect')
-        if self.condition == 4:
+        elif self.condition == 4:
             print('Excellent')
         elif self.condition == 3:
             print('Good')
