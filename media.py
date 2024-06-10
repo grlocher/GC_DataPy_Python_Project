@@ -16,7 +16,9 @@ class Books:
         return f'Title: {self.title}\nAuthor: {self.author}'
 
     def provide_condition(self):
-        if self.condition >= 4:
+        if self.condition == 5:
+            print('Perfect')
+        if self.condition == 4:
             print('Excellent')
         elif self.condition == 3:
             print('Good')
