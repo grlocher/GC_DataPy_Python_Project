@@ -11,9 +11,8 @@ def main():
         print('3. Search for a book by title')
         print('4. Checkout a book')
         print('5. Return a book')
-        print('6. Process returned books')
-        print('7. Add a new book')
-        print('8. Exit')
+        print('6. Add a new book')
+        print('7. Exit')
         choice = input('Please choose which action you would like to take (1-7): ')
 
         # Handling different choices made by the user
@@ -33,14 +32,18 @@ def main():
             # Return a book
             user_actions.return_book()
         elif choice == "6":
-            # Process returned books--is this needed?
-            user_actions.process_returns()
-        elif choice == "7":
             user_actions.add_book()
-        elif choice == "8":
+        elif choice == "7":
+            print("Thank you for using the library system. Goodbye!")
             break
         else:
             print("Invalid choice. Please try again.")
+
+        # Prompting user if they want to return to the main menu or exit
+        return_to_menu = input("Do you want to return to the main menu? (y/n): ").lower()
+        if return_to_menu != 'y':
+            print("Thank you for using the library system. Goodbye!")
+            break
 
 
 if __name__ == "__main__":
