@@ -27,7 +27,8 @@ def search_title():
 
 
 def select_book():
-    book_search = int(input('Enter the book you would like to check out: '))
+    book_display()
+    book_search = int(input('\nEnter the book you would like to check out: '))
     book = all_books[book_search - 1]
     if book.checked_out:
         print('Sorry, this book is not available at the moment')
