@@ -77,8 +77,9 @@ def add_book():
     print('From the following options, what is the condition of your book?')
     print('Excellent, Good, OK, Poor, Unreadable')
     condition = str(input('Condition: ')).capitalize()
-    condition_dict = {'Perfect': 5, 'Excellent': 4, 'Good': 3, 'OK': 2, 'Poor': 1, 'Unreadable': 0}
+    condition_dict = {'Perfect': 5, 'Excellent': 4, 'Good': 3, 'Ok': 2, 'Poor': 1, 'Unreadable': 0}
     new_condition = condition_dict.get(condition)
-    new_book = Books(new_title, new_author, checked_out, new_condition)
+    new_due_date = ""
+    new_book = Books(new_title, new_author, checked_out, new_condition, new_due_date)
     all_books.append(new_book)
     print('Book has been added!')
