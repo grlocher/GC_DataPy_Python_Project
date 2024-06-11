@@ -52,6 +52,7 @@ def return_book():
                 print(f'Adding following book to return list:\n{book_return.get_info()}')
                 books_to_return.append(book_return)
                 book_return.checked_out = False
+                book_return.set_due_date()
                 if book_return.condition < 1:
                     all_books.pop(book_selection - 1)
                     print(f'{book_return.title} is being recycled.')
