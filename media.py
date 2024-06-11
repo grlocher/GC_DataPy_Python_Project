@@ -35,16 +35,16 @@ class Books:
 
 
 all_books = [Books("1984", "George Orwell", False, 4, ""),
-             Books("The Great Gatsby", "F. Scott Fitzgerald", True, 5, ""),
+             Books("The Great Gatsby", "F. Scott Fitzgerald", True, 5, "2024-06-24"),
              Books("The Hobbit", "J.R.R. Tolkien", False, 2, ""),
              Books("Brave New World", "Aldous Huxley", False, 3, ""),
-             Books("To Kill a Mockingbird", "Harper Lee", True, 1, ""),
+             Books("To Kill a Mockingbird", "Harper Lee", True, 1, "2024-06-18"),
              Books("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", False, 4, ""),
-             Books("The Martian", "Andy Weir", True, 4, ""),
+             Books("The Martian", "Andy Weir", True, 4, "2024-06-22"),
              Books("Beloved", "Toni Morrison", False, 5, ""),
              Books("The Road", "Cormac McCarthy", False, 4, ""),
-             Books("The Name of the Wind", "Patrick Rothfuss", True, 2, ""),
+             Books("The Name of the Wind", "Patrick Rothfuss", True, 2, "2024-06-14"),
              Books("The Handmaid's Tale", "Margaret Atwood", False, 3, ""),
-             Books("The Night Circus", "Erin Morgenstern", True, 4, ""),
+             Books("The Night Circus", "Erin Morgenstern", True, 4, "2024-06-17"),
              Books("The Picture of Dorian Gray", "Oscar Wilde", False, 1, ""),
              Books("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", False, 3, "")]

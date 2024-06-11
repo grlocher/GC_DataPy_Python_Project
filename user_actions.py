@@ -5,7 +5,7 @@ from media import all_books, Books
 def book_display():
     for i, book in enumerate(all_books, 1):
         if book.checked_out:
-            text = "is currently checked out. It\'s current condition is: "
+            text = f"is currently checked out. Due: {book.due_date}. It\'s current condition is: "
         else:
             text = "is available. It\'s current condition is: "
         print(f'{i}. {book.title} by {book.author} {text}', end="")
