@@ -14,16 +14,24 @@ def book_display():
 
 def search_author():
     author_search = str(input('Search for a book by author: ')).lower()
+    matching_books = False
     for i, book in enumerate(all_books):
         if author_search in book.author.lower():
-            print(f'{i}. {book.title} by {book.author}')
+            matching_books = True
+            print(f'{i + 1}. {book.title} by {book.author}')
+    if not matching_books:
+        print('No books by that author were found.')
 
 
 def search_title():
     title_search = str(input('Search for a book by title: ')).lower()
+    matching_books = False
     for i, book in enumerate(all_books):
         if title_search in book.title.lower():
-            print(f'{i}. {book.title} by {book.author}')
+            matching_books = True
+            print(f'{i + 1}. {book.title} by {book.author}')
+    if not matching_books:
+        print('No books with that title were found.')
 
 
 def select_book():
