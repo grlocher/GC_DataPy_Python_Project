@@ -36,6 +36,7 @@ def select_book():
         today = datetime.datetime.today()
         date_delta = datetime.timedelta(days=14)
         due_date = (today + date_delta).date()
+        book.due_date = due_date
         print(f'Here is {book.title}. Your due date is on {due_date}. Happy reading!')
         book.checked_out = True
         book.update_condition()
